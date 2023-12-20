@@ -1,0 +1,124 @@
+
+@import url("https://use.typekit.net/hmt4zhf.css");
+@import url("https://use.typekit.net/hmt4zhf.css");
+
+body {
+    background-color: #f0ebe0;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    transform: translateX(10%);
+    display: flex;
+    opacity: 0;
+    font-family: "panel-mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 18px;
+    padding: 5px;
+    width: 7.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .4em solid #3c3c3c;
+  line-height: 0.05em; 
+  -webkit-animation: type3 5s steps(20, end), blink .5s step-end infinite alternate;
+  animation: type3 2s steps(20, end), blink .5s step-end infinite alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.line {
+    display: flex;
+    align-items: flex-start;
+    width: 80%;
+    border-left: transparent;
+}
+
+a {
+    font-family: "panel-mono", monospace;
+    font-weight: 700;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: none;
+    animation: fade ease;
+    animation-duration: 9s;
+}
+
+a:hover {
+color: #A3A095;
+}
+
+.tabs {
+    display: grid;
+    position: absolute;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+    padding: 30px;
+    right: 0;
+    top: 2;
+
+}
+
+.aboutme {
+    display: flex;
+    font-family: "panel-sans", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    font-style: normal;
+    text-decoration: none;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 30%;
+    line-height: 18px;
+
+    
+}
+
+
+
+
+
+@keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  @-webkit-keyframes blink {
+    50% {
+      border-color: tranparent;
+    }
+  }
+
+  @keyframes fade {
+    from {
+opacity: 0;
+    }
+to {
+opacity: 1;
+}
+}
