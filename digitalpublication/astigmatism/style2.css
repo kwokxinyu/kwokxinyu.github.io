@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'DotFont';
+    src: url(/assets/Dot.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'DotSpot';
+    src: url(/assets/DotSpot-Regular.ttf) format('truetype');
+}
+
+body, html {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    overflow: hidden;
+    font-family: "JetBrains Mono",monospace;
+
+  } 
+
+  .text {
+    cursor: default;
+    margin-left: 6px;
+    margin-top: 6px;
+    padding: 2px;
+    font-family: "DotSpot";
+    text-align: center;
+    font-size: 190px;
+    color: #000;
+    top: 20px; /* Adjust this value to control the distance from the top */
+    z-index: 10; /* Ensure the description is above the video */
+  }
+
+  .event {
+    font-family: "DotSpot";
+    text-align: center;
+    font-size: 190px;
+    color: #000;
+    top: 20px; /* Adjust this value to control the distance from the top */
+    z-index: 10; /* Ensure the description is above the video */
+  }
+
+  img {
+    position: absolute;
+
+  }
+  .bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: .9;
+    visibility: visible;
+  }
+  
+  .video-wrapper {
+    position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+    filter: saturate(0) brightness(4) contrast(2);
+    -webkit-filter: saturate(0) brightness(2) contrast(5);
+  }
+  
+  .video-wrapper::after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-size: 15px 12px, 15px 12px;
+    background-position: 0, 7px 0px;
+    background-image: radial-gradient(circle, #ffffff, rgb(46, 46, 46) 60%), radial-gradient(circle, #000000, rgb(177, 177, 177) 60%);
+    mix-blend-mode: multiply;
+  }
+  
+  .video-wrapper video {
+     width: 100vw;
+     height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+     min-height: 100vh;
+     min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff0000;
+    mix-blend-mode: multiply;
+  }
+
+  .button-30 {
+    position: fixed; /* Fixed position to anchor to the viewport */
+    bottom: 20px; /* 20px from the bottom of the viewport */
+    left: 20px; /* 20px from the left of the viewport */
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.hidden::after {
+    content: ''; /* Ensure the pseudo-element remains functional */
+    display: none; /* Hides the pseudo-element */
+}
+
+.catalog {
+  z-index: 11;
+  width: 100vw;
+  margin: 25px auto;
+  border-left: none; /* No vertical border on the left */
+  border-right: none; /* No vertical border on the right */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.section {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ccc; /* Horizontal top border */
+
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+
+.section-header {
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.section-header:hover {
+  background-color:  rgba(54, 54, 54, 0.7);
+}
+
+.section-content {
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  background-color: #f9f9f9;
+  opacity: 0.75;
+  transition: max-height 0.3s ease;
+}
+
+.section-content p {
+  margin: 20px 30px;
+  padding-right: 20vw;
+  font-size: 16px;
+  color: #333;
+}
+
+.section.open .section-content {
+  max-height: 900px; /* Adjust this based on content height */
+  transition: max-height 0.5s ease;
+}
+
+.section-toggle::before {
+  content: '\25BC'; /* Downward arrow */
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.section.open .section-toggle::before {
+  transform: rotate(180deg); /* Rotate to upward arrow */
+}
+
+  @keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+@keyframes scalePulse {
+    0% {
+      transform: scale(var(--scale-start)); /* Start at random scale */
+    }
+    100% {
+      transform: scale(var(--scale-end)); /* End at random scale */
+    }
+  }
+  

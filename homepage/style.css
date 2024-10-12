@@ -14,10 +14,10 @@ body {
 }
 
 p {
+  position: relative;
   font-family: "panel-sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
   margin: 0;
 }
 
@@ -42,6 +42,13 @@ a:hover {
     width: 24vh;
 }
 
+.name {
+  font-family: "panel-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 2vh;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -60,35 +67,51 @@ a:hover {
 
 .grid-item-inquiry {
   position: relative;
+  padding-top: 2vh;
   top: -10vh;
   left: 1.3vw;
+  margin-right: 3vh;
  
 }
 
 .grid-item-aboutme {
   position: relative;
   top: -3vh;
+  width: 3vh;
+  margin-top: -6vh;
   margin-right: 2vh;
 }
 
 .grid-item-archivalworks {
   position: relative;
   top: -1vh;
-  
+  margin-top: -6vh;
   margin-right: 2vh;
 }
 
 #righttext {
-  padding-right: -40px;
   width: 176px;
   transform: rotate(90deg);
+  margin-right: 3vh;
+  margin-top: -6vh;
 }
 
 
 @media only screen and (max-width: 800px) {
 .name {
   position: relative;
-margin-top: 35vh;
-margin-left: -19vw;
+  margin-top: 30vh;
+  margin-left: -29vh;
 }
+
+#righttext {
+margin-left: -10vh;
+}
+
+.grid-item-archivalworks {
+  padding-top: 2vh;
+  }
+  .grid-item-aboutme {
+    padding-top: 2vh;
+    }
 }

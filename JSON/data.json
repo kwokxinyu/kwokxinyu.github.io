@@ -1,0 +1,68 @@
+{
+    "projects": [
+      {
+        "year": 2024,
+        "date": "February",
+        "title": "DailyTheTable",
+        "titleImage": "imgs/dailythetable/dailythetable.svg",
+        "posterImage": "imgs/dailythetable/screenshot1.png",
+        "description": "Daily TheTable was inspired by the documentation of my personal eating habits of breakfast, lunch and dinner. The multi-page web design focuses on displaying the customized collection, as well as touching upon the accessories of the web as a medium: the use of texture, vectorised icons, and digital typography.",
+        "link": "https://kwokxinyu.github.io/core2inter/elasticcollections/index.html"
+      },
+      {
+        "year": 2024,
+        "date": "March",
+        "title": "Stonehenge",
+        "titleImage": "",
+        "posterImage": "imgs/SKYMAPS.png",
+        "description": "The project explores the ideation of map interpretation. The visualisation identifies the theoretical astronomical map of The Stonehenge, a prehistoric megalithic structure on Salisbury Plain in Wiltshire, England, two miles west of Amesbury. The map intends to provide multiple perspectives of the monument while incorporating typographic elements.",
+        "link": ""
+      },
+      {
+        "year": 2024,
+        "date": "May",
+        "title": "Disney UI/UX",
+        "titleImage": "",
+        "posterImage": "",
+        "description": "",
+        "link": ""
+      },
+      {
+        "year": 2024,
+        "date": "June",
+        "title": "Sartorium",
+        "titleImage": "",
+        "posterImage": "",
+        "description": "The project was inspired by the definition of \"Sartorial\", which is often used to describe custom tailoring, or \"to tailor\". The typography incorporates the exploration of kerning as well as emphasizing the ideology of \"fixing the lines\" in relation to customizing clothing. The logo is designed to coherently align with the typeface, referencing a “tie”, being built by the shape of the \"R\" in the text.",
+        "link": ""
+      },
+      {
+        "year": 2023,
+        "date": "March",
+        "title": "TheOrdinary Sustainable Packaging Project",
+        "titleImage": "imgs/ordinary/theordinarypackagingproject.png",
+        "posterImage": "imgs/ordinary/2.jpg",
+        "description": "The Ordinary Packaging project seeks to revolutionize the way products are packaged, focusing on reducing waste and minimizing environmental impact. By leveraging biodegradable, recyclable, and reusable materials, the project aims to replace traditional plastic and non-sustainable packaging options with greener alternatives. The designed box also holds a strong emphasis on tackling overpopulated living areas, the elevated legs of the box acts as a double-layer container, maximizing usage space.",
+        "link": ""
+      },
+      {
+        "year": 2023,
+        "date": "December",
+        "title": "EcoEcho Magazine Design",
+        "titleImage": "",
+        "posterImage": "",
+        "description": "EcoEcho, is inspired by the concept of magnifying eco-living which correlates to the connotation of an “echo”; our magazine thrives to elucidate our platform by “echoing” unfamiliar voices that are promoting sustainability in New York communities. The magazine attempts to target a wide-range of demographics, from families to business corporations, expressing the simplicity in effort needed to contribute towards the global environmental crisis.",
+        "link": ""
+      },
+      {
+        "year": 2023,
+        "date": "December",
+        "title": "Manifesto Typographic Poster",
+        "titleImage": "",
+        "posterImage": "imgs/ManifestoPoster.psd",
+        "description": "",
+        "link": ""
+      }
+    ]
+  }
+  

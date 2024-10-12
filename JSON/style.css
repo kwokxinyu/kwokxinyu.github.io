@@ -1,0 +1,199 @@
+
+
+@import url("https://use.typekit.net/pzl5wxf.css");
+@import url("https://use.typekit.net/pzl5wxf.css");
+
+body {
+    background-color: #f0ebe0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-image: url(backgroundtexture.jpeg);
+    background-size: cover;
+    height: auto;
+    
+}
+
+#collection {
+  width: fit-content;
+  height: auto;
+}
+
+p {
+  font-family: "panel-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  margin: 0;
+}
+
+.name {
+  font-family: "panel-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 2vh;
+}
+
+a {
+  z-index: 1000;
+  cursor: pointer;
+  color: black;
+  text-decoration-line: none;
+  font-family: "chandler-42-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+button {
+  z-index: 2000;
+  color: black;
+  cursor: pointer;
+  text-decoration-line: none;
+  font-family: "chandler-42-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+
+a:hover {
+  font-weight: 800;
+}
+
+.content {
+    margin: 1vh;
+    margin-bottom: 2vh;
+}
+
+.grid-item.list {
+  width: 200px;
+  height: auto;
+  padding-top: 1vh;
+}
+
+.list {
+  position: absolute;
+  left: 200px;
+  font-family: "panel-sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  margin: 0;
+}
+
+button {
+  z-index: 200;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+  text-decoration-line: none;
+  font-family: "chandler-42-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  text-align: start;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4, 216px);
+  padding: 2vh;
+  width: 100%;
+  height: 100vh;
+  border: 0;
+  
+}
+.grid-item {
+  z-index: -100;
+  border: 0px solid #ccc;
+  padding: 2vh;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-item-inquiry {
+  position: relative;
+  top: -10vh;
+  /* left: 1.3vw; */
+ 
+}
+
+.grid-item-aboutme {
+  position: relative;
+  top: -3vh;
+  margin-right: 2vh;
+}
+
+.grid-item-archivalworks {
+  position: relative;
+  top: -1vh;
+  
+  margin-right: 2vh;
+}
+
+#righttext {
+position: relative;
+  width: 176px;
+  transform: rotate(90deg);
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.list-item-content {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.list-item-image {
+  max-width: 80%;
+  height: auto;
+}
+
+
+.title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.caption {
+  font-size: 0.9em;
+  color: #555;
+}
+.date {
+  font-size: 0.9em;
+  color: #999;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .firstdate {
+      position: relative; /* or fixed, depending on your layout needs */
+      top: 60px;
+      left: 0; /* Adjust as needed to ensure it stays in the correct position */
+      margin-left: 50px;
+      margin-right: auto;
+      text-align: center; /* Center text if needed */
+  }
+}
+
+@media only screen and (max-width: 800px) {
+.name {
+  opacity: 0;
+}
+}
+
