@@ -36,7 +36,7 @@ document.addEventListener('mousemove', function() {
 triggerBlurEffect();
 
 $(document).ready(function(){
-    var countS = 25;
+    var countS = 20;
     $("#session").html(countS);
     var countB = 5;
     $("#break").html(countB);
