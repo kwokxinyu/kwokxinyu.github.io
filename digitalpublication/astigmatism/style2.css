@@ -9,8 +9,7 @@
 }
 
 body, html {
-    margin-left: 20px;
-    margin-right: 20px;
+   margin: 0;
     padding: 0;
     height: 100%;
     display: flex;
@@ -18,8 +17,20 @@ body, html {
     align-items: start;
     overflow: hidden;
     font-family: "JetBrains Mono",monospace;
+    filter: blur(0px); /* Initially no blur */
+    transition: filter 0.3s ease; /* Smooth transition when changing */
 
   } 
+
+  .text-black {
+    color: black !important; /* Force all text color to black */
+}
+
+.text-black .text,
+.text-black .section-header,
+.text-black .section-content {
+    color: black !important;
+}
 
   .text {
     cursor: default;
@@ -107,6 +118,7 @@ body, html {
   }
 
   .button-30 {
+    z-index: 14;
     position: fixed; /* Fixed position to anchor to the viewport */
     bottom: 20px; /* 20px from the bottom of the viewport */
     left: 20px; /* 20px from the left of the viewport */
@@ -169,12 +181,16 @@ body, html {
 }
 
 .section {
+  padding: 0;
+  margin-left: 40px;
+  margin-right: 40px;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ccc; /* Horizontal top border */
-
 }
 
 .section:last-child {
+  margin-left: 40px;
+  margin-right: 40px;
   border-bottom: none;
 }
 
@@ -197,24 +213,33 @@ body, html {
   user-select: none;
   display: flex;
   flex-direction: row;
+    justify-content: space-evenly; /* This spaces the contents evenly */
   max-height: 0;
   overflow: hidden;
-  padding: 0 10px;
-  background-color: #f9f9f9;
+  padding: 0;
   opacity: 0.75;
   transition: max-height 0.3s ease;
 }
 
 .section-content p {
-  margin: 20px 30px;
-  padding-right: 20vw;
+  padding: 0;
+  margin-left: 30px;
+  width: 800px;
   font-size: 16px;
   color: #333;
 }
 
+#section-subheader {
+ margin-right: 30px; 
+ display:flex; 
+ justify-content: end;
+}
+
 .section.open .section-content {
-  max-height: 900px; /* Adjust this based on content height */
+  max-height: 200px; /* Adjust this based on content height */
   transition: max-height 0.5s ease;
+  overflow-y: scroll;
+  background-color: #f9f9f9;
 }
 
 .section-toggle::before {
@@ -249,4 +274,13 @@ body, html {
       transform: scale(var(--scale-end)); /* End at random scale */
     }
   }
+
+  @keyframes gradualBlur {
+    0% {
+        filter: blur(0px); /* No blur at the start */
+    }
+    100% {
+        filter: blur(10px); /* Full blur at the end (adjust this value as needed) */
+    }
+}
   

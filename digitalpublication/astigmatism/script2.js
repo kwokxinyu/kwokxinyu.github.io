@@ -28,3 +28,27 @@ headers.forEach(header => {
         });
     });
 });
+
+document.querySelector('.button-30').addEventListener('click', function() {
+    // Toggle the text-black class on the body or a specific container element
+    document.body.classList.toggle('text-black');
+});
+
+function triggerBlurEffect() {
+    // Clear any previous animation by removing the class
+    document.body.style.animation = 'none';
+    
+    // Force a reflow to reset the animation
+    void document.body.offsetWidth;
+
+    // Add the class back to restart the animation
+    document.body.style.animation = 'gradualBlur 50s forwards';
+}
+
+// Detect mouse movement on the whole document
+document.addEventListener('mousemove', function() {
+    triggerBlurEffect(); // Restart blur effect when mouse moves
+});
+
+// Initially start the blur effect on page load
+triggerBlurEffect();
