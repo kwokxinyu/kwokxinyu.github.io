@@ -62,6 +62,10 @@ body, html {
     text-decoration-line: none;
   }
 
+  a:hover {
+    color: #ccc;
+  }
+
   .event {
     font-family: "DotSpot";
     text-align: center;
@@ -135,7 +139,7 @@ body, html {
   }
 
   .button-30 {
-    z-index: 14;
+    z-index: 19;
     position: fixed; /* Fixed position to anchor to the viewport */
     bottom: 20px; /* 20px from the bottom of the viewport */
     left: 20px; /* 20px from the left of the viewport */
@@ -203,6 +207,8 @@ body, html {
   margin-right: 40px;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ccc; /* Horizontal top border */
+  transition: filter 0.5s ease; /* Smooth transition for the filter */
+  filter: blur(0);
 }
 
 .section:last-child {
@@ -266,7 +272,26 @@ body, html {
 }
 
 .section.open .section-toggle::before {
-  transform: rotate(180deg); /* Rotate to upward arrow */
+  transform: rotate(180deg);
+   /* Rotate to upward arrow */
+}
+
+.imagefilter {
+ opacity: 0; /* Initially hidden */
+  z-index: 15;
+
+}
+
+.imagefilter.visible {
+  display: block; /* Revealed when class is added */
+  opacity: 1;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
 }
 
   @keyframes bg-animation {
@@ -297,7 +322,7 @@ body, html {
         filter: blur(0px); /* No blur at the start */
     }
     100% {
-        filter: blur(10px); /* Full blur at the end (adjust this value as needed) */
+        filter: blur(20px); /* Full blur at the end (adjust this value as needed) */
     }
 }
 
